@@ -1,0 +1,227 @@
+/* Base styles for user profile area */
+.user-profile-area {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card styles */
+.user-profile-area .card {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: rgba(243, 154, 154, 0.214);
+  transition: all 0.4s ease-out !important;
+  width: 18rem;
+  height: 14rem;
+  border-radius: 20px;
+}
+
+/* Button styles */
+.btn-outline {
+  color: #FF6B6B;
+  transition: all 0.3s;
+  border: 1px solid #FF6B6B;
+}
+.btn-sm {
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.btn-primary {
+  color: #ffffff;
+  background-color: #f5abab !important;
+  transition: all 0.3s ease-out;
+  box-shadow: 0 10px 30px -7px rgba(255,107,107, 0.5);
+  border: 1px solid #FF6B6B;
+}
+
+/* Card icon styles */
+.user-profile-area .card .icon {
+  overflow: hidden;
+  margin-top: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+.user-profile-area .card .icon img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+/* Card title styles */
+.user-profile-area .card .card-title {
+  margin-bottom: 15px;
+  margin-top: -4px;
+  font-weight: 800;
+}
+
+/* Button groups */
+.user-profile-area .card .btn-groups {
+  margin-top: 15px;
+}
+
+/* Social link styles */
+.social-link {
+  --size: 36px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.social-link a {
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  background-color: rgba(255, 255, 255, 0.953);
+  color: #FF6B6B;
+  font-size: 16px;
+  border-radius: 50%;
+}
+.user-profile-area .card .social-link {
+  margin-bottom: 5px;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Card hover effects */
+.user-profile-area .card:hover {
+  border-color: transparent;
+  box-shadow: 0px 4px 80px rgba(17, 16, 33, 0.08);
+}
+
+/* Shape styles */
+.user-profile-area .shape img {
+  position: absolute;
+  z-index: -2;
+}
+.user-profile-area .shape img.shape-1 {
+  bottom: 3%;
+  right: 30%;
+  animation: moveLeftRight 5s linear infinite;
+}
+.user-profile-area .shape img.shape-2 {
+  top: 60%;
+  left: 4%;
+  animation: moveUpDown 5s linear infinite;
+}
+.user-profile-area .shape img.shape-3 {
+  bottom: 25%;
+  right: 11%;
+  animation: moveAround 20s linear infinite;
+}
+.user-profile-area .shape img.shape-4 {
+  top: 14%;
+  left: 6%;
+  animation: rotate 8s linear infinite;
+}
+.user-profile-area .shape img.shape-5 {
+  top: 18%;
+  right: 8%;
+  animation: rotate 10s linear infinite;
+}
+.user-profile-area .shape img.shape-6 {
+  top: 15%;
+  left: 32%;
+  animation: moveLeftRight 10s linear infinite;
+}
+
+/* Slider navigation styles */
+.slider-navigation .slider-btn {
+  padding: 3px 20px;
+  border-radius: 30px;
+  border: transparent;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 24px;
+  line-height: 1;
+  transition: all 0.4s ease-out;
+}
+
+/* Featured section title styles */
+.Featured-section-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.Featured-section-title h2 {
+  font-size: 42px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+}
+
+/* Featured section styles */
+.Featured-section {
+  width: 100%;
+  padding-left: 3rem;
+  padding-bottom: 2rem;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+  .user-profile-area .card {
+      width: 16rem;
+      height: auto;
+  }
+  .slider-navigation .slider-btn {
+      font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .user-profile-area .card {
+      width: 14rem;
+  }
+  .Featured-section-title h2 {
+      font-size: 36px;
+  }
+  .Featured-section {
+      padding-left: 2rem;
+      padding-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .user-profile-area .card {
+      width: 12rem;
+      padding: 20px;
+  }
+  .slider-navigation .slider-btn {
+      font-size: 18px;
+      padding: 2px 15px;
+  }
+  .Featured-section-title {
+      padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .user-profile-area .card {
+      width: 100%;
+      height: auto;
+      padding: 15px;
+  }
+  .user-profile-area .card .icon {
+      width: 70px;
+      height: 70px;
+  }
+  .user-profile-area .card .icon img {
+      width: 60px;
+      height: 60px;
+  }
+  .Featured-section-title h2 {
+      font-size: 30px;
+  }
+  .Featured-section {
+      padding-left: 1rem;
+      padding-bottom: 1rem;
+  }
+  .user-profile-area{
+    padding: 0px !important;
+  }
+}

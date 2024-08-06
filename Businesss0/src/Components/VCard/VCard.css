@@ -1,0 +1,197 @@
+.vcard-area {
+    position: relative;
+    overflow: hidden;
+    background-color: #fef3f3;
+   
+    height: auto;
+    }
+
+  .vcard-area .content-title .title {
+    margin-bottom: 25px;
+    font-size: 42px;
+    font-weight:900;
+        
+  }
+  
+  .vcard-area .content-title .text {
+    max-width: 450px;
+    font-family: "Rubik",sans-serif;
+    margin-bottom: 30px;
+    
+  }
+  
+  .vcard-area .vcard-slider .card .lazy-container::after {
+    padding-bottom: 170%;
+  }
+  
+  .vcard-area .vcard-slider .card .card-image {
+    max-height: unset;
+    filter: unset;
+  }
+  
+  .vcard-area .vcard-slider .card:hover .card-image img {
+    transform: none;
+  }
+  
+  .vcard-area .shape img {
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .vcard-area .shape img.shape-1 {
+    top: 13%;
+    left: 40%;
+    animation: moveLeftRight 10s linear infinite;
+  }
+  
+  .vcard-area .shape img.shape-2 {
+    top: 60%;
+    left: 4%;
+    animation: moveUpDown 5s linear infinite;
+  }
+  
+  .vcard-area .shape img.shape-3 {
+    bottom: 25%;
+    right: 11%;
+    animation: moveAround 20s linear infinite;
+  }
+  
+  .vcard-area .shape img.shape-4 {
+    top: 14%;
+    left: 6%;
+    animation: rotate 8s linear infinite;
+  }
+  
+  .vcard-area .shape img.shape-5 {
+    top: 18%;
+    right: 8%;
+    animation: rotate 10s linear infinite;
+  }
+  
+  .vcard-area .shape img.shape-6 {
+    bottom: 35%;
+    left: 39%;
+    animation: moveLeftRight 10s linear infinite;
+  }
+  
+  .vcard-area .card {
+    background-color: transparent;
+    transition: transform 0.5s ease-out;
+    height: 30rem;
+    border: none !important;
+  }
+  
+  .vcard-area .card .card-image {
+    position: relative;
+    overflow: hidden;
+    max-height: 600px;
+    border-radius: 10px;
+    filter: drop-shadow(0px 10px 54px rgba(43, 43, 43, 0.1));
+  }
+  
+  .vcard-area .card .card-image img {
+    width: 100%;
+    transition: transform 10s ease-out;
+  }
+  
+  .vcard-area .card .card-title {
+    margin-top: 15px;
+    margin-bottom: 0;
+    z-index: 5;
+  }
+  
+  .vcard-area .card .hover-show {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: rgba(12, 5, 40, 0.4);
+    z-index: 4;
+  }
+  
+  .vcard-area .card .btn-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-primary);
+    font-size: 18px;
+  }
+  
+  .vcard-area .card:hover .card-image img {
+    transform: translateY(calc(-100% + 460px));
+  }
+  
+  .vcard-area .card:hover .card-title a {
+    color: var(--color-primary);
+  }
+  
+  .vcard-area .card:hover .hover-show {
+    opacity: 1;
+  }
+  
+  @media (max-width: 1200px) {
+    .vcard-area .vcard-slider {
+      padding: 0 10px;
+    }
+  
+    .vcard-area .vcard-slider .swiper-slide {
+      flex: 1 0 30%;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .vcard-area .content-title .title {
+      font-size: 36px;
+    }
+    .vcard-area{
+      padding-top: 4rem;
+    }
+  
+    .vcard-area .content-title .text {
+      max-width: 400px;
+    }
+  
+    .vcard-area .vcard-slider .swiper-slide {
+      flex: 1 0 45%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .vcard-area .content-title .title {
+      font-size: 30px;
+    }
+  
+    .vcard-area .content-title .text {
+      max-width: 100%;
+    }
+  
+    .vcard-area .vcard-slider .swiper-slide {
+      flex: 1 0 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .vcard-area .content-title .title {
+      font-size: 24px;
+    }
+  
+    .vcard-area .content-title .text {
+      font-size: 14px;
+    }
+  
+    .vcard-area .card .card-image {
+      max-height: 300px;
+    }
+  }

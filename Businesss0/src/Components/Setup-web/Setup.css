@@ -1,0 +1,186 @@
+.store-area {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .Setup-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card-outer {
+    flex: 1 1 calc(25% - 20px); /* Adjusts to fit 4 cards per row with some margin */
+    margin: 10px; /* Adds space between cards */
+  }
+  
+  .card-setup {
+    overflow: hidden;
+    height: 100%;
+    justify-content: center;
+    padding: 30px;
+    border: 1px solid #EAEAEA;
+    transition: all 0.4s ease-out;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .card-setup::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Adjust the height of the border */
+    background-color: red; /* Change to desired color */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out;
+  }
+  
+  .card-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 70px;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: var(--color-dark);
+  }
+  
+  .store-area .card-setup .card-icon::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 74.0740740741%;
+    margin-block: auto;
+    -webkit-margin-start: -30px;
+    margin-inline-start: -30px;
+    background-color: #FF6B6B;
+    opacity: 0.1;
+    transition: opacity 0.3s ease-out;
+    z-index: -1;
+  }
+  
+  
+  .card-content {
+    position: relative;
+  }
+  
+  .card-content .card-title {
+    margin-bottom: 10px;
+  }
+  
+  .card-content .card-text {
+    margin-bottom: 10px;
+  }
+  
+  .card-setup:hover {
+    border-color: transparent;
+    box-shadow: 0px 4px 80px rgba(17, 16, 33, 0.08);
+    transform: translateY(-5px);
+  }
+  .store-area .card:hover {
+    border-color: transparent;
+    box-shadow: 0px 4px 80px rgba(17, 16, 33, 0.08);
+    transform: translateY(-5px);
+  }
+  
+  .card-setup:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .card-setup:hover .card-icon:after {
+    opacity: 1;
+  }
+
+  .section-title{
+    width: 100% !important;
+
+    justify-content: left !important;
+  }
+  .section-title h2{
+    font-family: Rubik, sans-serif;
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  /* Media query for tablets and smaller devices */
+@media (max-width: 1024px) {
+  .card-outer {
+    flex: 1 1 calc(50% - 20px); /* Adjust to fit 2 cards per row with some margin */
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .card-outer {
+    flex: 1 1 100%; /* Adjust to fit 1 card per row */
+    margin: 10px 0; /* Adds vertical margin between cards */
+    padding: 3rem;
+  }
+      .setup-title{
+        margin-left: 3rem;
+      }
+  .card-setup {
+  
+    padding: 20px; /* Adjust padding as needed */
+  }
+
+  .card-icon {
+    max-width: 50px; /* Adjust icon size */
+    font-size: 28px; /* Adjust icon font size */
+  }
+
+  .card-content .card-title {
+    font-size: 1.5rem; /* Adjust title font size */
+  }
+
+  .card-content .card-text {
+    font-size: 0.875rem; /* Adjust text font size */
+  }
+
+  .section-title h2 {
+    font-size: 2rem; /* Adjust section title font size */
+  }
+}
+
+/* Media query for very small devices */
+@media (max-width: 480px) {
+
+  .card-outer {
+   padding: 0px !important;
+    padding-left: 2rem !important;
+    padding-right: 1.6rem !important;
+  }
+  .card-setup {
+    padding: 15px; /* Adjust padding as needed */
+  }
+
+  .card-icon {
+    max-width: 40px; /* Adjust icon size */
+    font-size: 24px; /* Adjust icon font size */
+  }
+
+  .card-content .card-title {
+    font-size: 1.25rem; /* Adjust title font size */
+  }
+
+  .card-content .card-text {
+    font-size: 0.75rem; /* Adjust text font size */
+  }
+
+  .section-title h2 {
+    font-size: 1.5rem; /* Adjust section title font size */
+  }
+}

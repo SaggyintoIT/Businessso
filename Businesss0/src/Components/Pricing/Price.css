@@ -1,0 +1,329 @@
+.pricing-area {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .pricing-area .nav-tabs-navigation {
+    margin-bottom: 40px;
+  }
+  .text  {
+    max-width: 530px !important;
+    margin-inline: auto;
+    margin-bottom: 0;
+    margin-top: 1rem !important;
+}
+.section-title h2{
+    font-family: sans-serif;
+    margin-top: 1rem !important;
+
+}
+.tab-pane {
+    display: none; /* Hide all tab panes by default */
+   
+  }
+  .tab-pane.active {
+    display: block; /* Show the active tab pane */
+  }
+  
+
+  .pricing-area .nav-tabs-navigation .nav {
+    display: inline-flex;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(var(--color-primary-rgb), 0.13);
+  }
+  
+  .pricing-area .nav-tabs-navigation .nav .nav-link {
+    color: var(--text-dark);
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 12px 35px;
+    border-width: 0;
+    cursor: pointer;
+  }
+  
+  .pricing-area .nav-tabs-navigation .nav .nav-link.active {
+    color: var(--color-white) !important;
+    background-color: var(--color-primary);
+  }
+  
+  .pricing-area .card {
+    overflow: hidden;
+    padding: 0 30px 30px;
+    border: 1px solid var(--border-color);
+    background-color: var(--color-white);
+    border-radius: 15px;
+    transition: all 0.3s ease-out;
+    z-index: 1;
+  }
+  
+  .pricing-area .card::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-primary);
+    transform: translateY(calc(-100% - 2px));
+    z-index: -1;
+    transition: transform 0.5s ease-out;
+    z-index: -1;
+  }
+  
+  .pricing-area .card .icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    font-size: 32px;
+    text-align: center;
+    padding: 30px 0 20px;
+    border-radius: 0 0 7px 7px;
+    color: var(--color-dark);
+    background-color: rgba(var(--color-primary-rgb), 0.13);
+  }
+  
+  .pricing-area .card .label {
+    -webkit-padding-start: 16px;
+    padding-inline-start: 16px;
+  }
+  
+  .pricing-area .card .label span {
+    display: inline-block;
+    padding: 5px 18px;
+    border-radius: 30px;
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    display: none;
+  }
+  
+  .pricing-area .card h4 {
+    margin-bottom: 0;
+  }
+  
+  .pricing-area .card .text {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .pricing-area .card .price {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: 48px;
+    line-height: 1;
+    -webkit-margin-end: 10px;
+    margin-inline-end: 10px;
+  }
+  
+  .pricing-area .card h5 {
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+  
+  .pricing-area .card .pricing-list {
+    margin-bottom: 0;
+  }
+  
+  .pricing-area .card .pricing-list li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  
+  .pricing-area .card .pricing-list i {
+    width: 25px;
+    height: 25px;
+    line-height: 26px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-white);
+    /* background-color: var(--color-primary); */
+    -webkit-margin-end: 10px;
+    margin-inline-end: 10px;
+  }
+  
+  .pricing-area .card .pricing-list i.fa-check {
+    background-color: var(--color-green);
+  }
+  
+  .pricing-area .card .pricing-list i.fa-times {
+    background-color: var(--color-red);
+  }
+  
+  .pricing-area .card .btn-outline {
+    background: var(--color-white);
+  }
+  
+  .pricing-area .card :is(h4, .text, .price, .period, h5, .pricing-list) {
+    transition: color 0.1s linear;
+  }
+  
+  .pricing-area .card:is(.pricing-area .card:hover, .pricing-area .card.active) {
+    box-shadow: 0px 4px 80px rgba(17, 16, 33, 0.08);
+  }
+  
+  .pricing-area .card:is(.pricing-area .card:hover, .pricing-area .card.active)::after {
+    transform: none;
+  }
+  
+  .pricing-area .card:is(.pricing-area .card:hover, .pricing-area .card.active) .icon {
+    background: var(--color-white);
+  }
+  
+  .pricing-area .card:is(.pricing-area .card:hover, .pricing-area .card.active) :is(h4, .text, .price, .period, h5, .pricing-list, .show-more) {
+    color: var(--text-white);
+  }
+  
+  .pricing-area .card:is(.pricing-area .card:hover, .pricing-area .card.active) .label span {
+    display: inline-block;
+  }
+  
+  .pricing-area .card:is(.pricing-area .card:hover, .pricing-area .card.active) .disabled i {
+    border-color: transparent;
+  }
+  
+  .pricing-area .card:is(.pricing-area .card:hover, .pricing-area .card.active) .pricing-list i {
+    /* color: var(--color-primary); */
+    background-color: var(--color-white);
+  }
+  
+  .pricing-area .card:is(.pricing-area .card:hover, .pricing-area .card.active) .pricing-list i.fa-times {
+    color: var(--color-red);
+  
+  }
+  
+  .pricing-area .card:is(.pricing-area .card:hover, .pricing-area .card.active) .pricing-list i.fa-check {
+    color: var(--color-green);
+  
+  }
+  
+  .pricing-area .card:is(.pricing-area .card:hover, .pricing-area .card.active) .btn-primary {
+    border-color: var(--color-white);
+    color: var(--color-white);
+  }
+  
+  .pricing-area .card:is(.pricing-area .card:hover, .pricing-area .card.active) .btn-outline {
+    color: var(--color-primary);
+    background: unset;
+    background-color: var(--color-white);
+  }
+  
+  .pricing-area .card:hover {
+    border-color: transparent;
+    box-shadow: 0px 4px 80px rgba(17, 16, 33, 0.08);
+    transform: none;
+  }
+  
+  .pricing-area .item:nth-child(1) .card .icon {
+    color: #21C4DF;
+    background-color: rgba(33, 196, 223, 0.1);
+  }
+  
+  .pricing-area .item:nth-child(2) .card .icon {
+    color: #FFB228;
+    background-color: rgba(255, 178, 40, 0.1);
+  }
+  
+  .pricing-area .item:nth-child(3) .card .icon {
+    color: #00D5AE;
+    background-color: rgba(0, 213, 174, 0.1);
+  }
+  
+  .pricing-area .item:nth-child(4) .card .icon {
+    color: #FF5195;
+    background-color: rgba(255, 81, 149, 0.1);
+  }
+  
+  .pricing-area .item:nth-child(5) .card .icon {
+    color: #6B76FF;
+    background-color: rgba(107, 118, 255, 0.1);
+  }
+  
+  .pricing-area .item:nth-child(6) .card .icon {
+    color: #F59872;
+    background-color: rgba(245, 152, 114, 0.1);
+  }
+  
+  .pricing-area .item:nth-child(7) .card .icon {
+    color: #E74C3C;
+    background-color: rgba(231, 76, 60, 0.1);
+  }
+  
+  .pricing-area .item:nth-child(8) .card .icon {
+    color: #3C8CE7;
+    background-color: rgba(60, 140, 231, 0.1);
+  }
+  
+  .pricing-area .item:nth-child(9) .card .icon {
+    color: #FFAA85;
+    background-color: rgba(255, 170, 133, 0.1);
+  }
+  
+  .pricing-area .item:nth-child(10) .card .icon {
+    color: #3C8CE7;
+    background-color: rgba(60, 140, 231, 0.1);
+  }
+  
+  .pricing-area .show-more {
+    display: block;
+    color: var(--color-dark);
+    margin-top: 5px;
+    cursor: pointer;
+    margin-bottom: 35px;
+    transition: transform 0.4s ease-out;
+  }
+  
+  .pricing-area .shape img {
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .pricing-area .shape img.shape-1 {
+    top: 23%;
+    right: 30%;
+    animation: moveUpDown 10s linear infinite;
+  }
+  
+  .pricing-area .shape img.shape-2 {
+    top: 60%;
+    left: 4%;
+    animation: moveUpDown 5s linear infinite;
+  }
+  
+  .pricing-area .shape img.shape-3 {
+    bottom: 25%;
+    right: 11%;
+    animation: moveAround 20s linear infinite;
+  }
+  
+  .pricing-area .shape img.shape-4 {
+    top: 14%;
+    left: 6%;
+    animation: rotate 8s linear infinite;
+  }
+  
+  .pricing-area .shape img.shape-5 {
+    top: 18%;
+    right: 8%;
+    animation: rotate 10s linear infinite;
+  }
+  
+  .pricing-area .shape img.shape-6 {
+    bottom: 35%;
+    left: 39%;
+    animation: moveLeftRight 10s linear infinite;
+  }
+  
+  @media (max-width:500px) {
+    .tab-pane{
+      padding: 0px !important;
+
+    }
+    
+  }

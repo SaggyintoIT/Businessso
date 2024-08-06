@@ -1,0 +1,275 @@
+@import "https://fonts.googleapis.com/css?family=Rubik";
+
+.choose-area {
+    position: relative;
+    overflow: hidden;
+    padding: 5rem;
+}
+
+.choose-area .content-title .title {
+    margin-bottom: 25px;
+    font-size: 42px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+}
+
+.choose-area .content-title .text {
+    max-width: 450px;
+    margin-bottom: 30px;
+    opacity: 0.7;
+}
+
+.choose-area .content-title .choose-list {
+    margin-bottom: 50px;
+    padding: 0px !important;
+}
+
+.choose-area .content-title .choose-list li {
+    position: relative;
+    opacity: 0.7;
+}
+
+.choose-area .content-title .choose-list li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.choose-area .content-title .choose-list li span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    line-height: 25px;
+    text-align: center;
+    color: var(--text-white);
+    font-size: 12px;
+    background-color: var(--color-green);
+    border-radius: 50%;
+}
+
+.choose-area .card-choose {
+    padding: 0 30px 30px;
+    border: 1px solid var(--border-color);
+    transition: all 0.4s ease-out;
+    transform: translateY(10px);
+    z-index: 1;
+    width: auto;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Add margin to create space between cards */
+}
+
+.choose-area .card-choose::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+    border-bottom: 2px solid #FF6B6B;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-out;
+    z-index: -1;
+    pointer-events: none; /* Ensure the border does not interfere with hover effects */
+}
+
+.choose-area .card-choose .card-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: auto;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 25px;
+    background-color: rgba(255, 107, 107, 0.1);
+}
+
+.choose-area .card-choose .card-icon img {
+    max-width: 50px;
+}
+
+.choose-area .card-choose .card-content {
+    position: relative;
+}
+
+.choose-area .card-choose .card-content .card-title {
+    margin-bottom: 15px;
+}
+
+.choose-area .card-choose .card-content .card-title,
+.choose-area .card-choose .card-content .card-text {
+    transition: color 0.4s ease-out;
+    transition-delay: 100ms;
+}
+
+.choose-area .card-choose .card-content .card-text {
+    margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.choose-area .card-choose .card-content .card-btn {
+    line-height: 1;
+    color: var(--color-primary);
+}
+
+.choose-area .card-choose:hover {
+    border-color: transparent;
+    box-shadow: 0px 4px 80px rgba(17, 16, 33, 0.08);
+    transform: none;
+}
+
+.choose-area .card-choose:hover::after {
+    transform: scaleX(1);
+}
+
+.choose-area .shape img {
+    position: absolute;
+    z-index: -1;
+}
+
+.choose-area .shape img.shape-1 {
+    top: 13%;
+    left: 40%;
+    animation: moveLeftRight 10s linear infinite;
+}
+
+.choose-area .shape img.shape-2 {
+    top: 60%;
+    left: 4%;
+    animation: moveUpDown 5s linear infinite;
+}
+
+.choose-area .shape img.shape-3 {
+    bottom: 25%;
+    right: 11%;
+    animation: moveAround 20s linear infinite;
+}
+
+.choose-area .shape img.shape-4 {
+    top: 14%;
+    left: 6%;
+    animation: rotate 8s linear infinite;
+}
+
+.choose-area .shape img.shape-5 {
+    top: 18%;
+    right: 8%;
+    animation: rotate 10s linear infinite;
+}
+
+.choose-area .shape img.shape-6 {
+    bottom: 35%;
+    left: 39%;
+    animation: moveLeftRight 10s linear infinite;
+}
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+    .choose-area {
+        padding: 4rem;
+    }
+
+    .choose-area .content-title .title {
+        font-size: 36px;
+    }
+
+    .choose-area .content-title .text {
+        max-width: 400px;
+    }
+
+    .choose-area .content-title .choose-list li {
+        font-size: 14px;
+    }
+
+    .choose-area .card-choose {
+        padding: 0 20px 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .choose-area {
+        padding: 3rem;
+    }
+
+    .choose-area .content-title .title {
+        font-size: 32px;
+    }
+
+    .choose-area .content-title .text {
+        max-width: 350px;
+    }
+
+    .choose-area .content-title .choose-list li {
+        font-size: 13px;
+    }
+
+    .choose-area .card-choose {
+        padding: 0 15px 15px;
+    }
+
+    .choose-area .row.justify-content-center {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .choose-area .card-choose {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .choose-area {
+        padding: 2rem;
+    }
+
+    .choose-area .content-title .title {
+        font-size: 28px;
+    }
+
+    .choose-area .content-title .text {
+        max-width: 300px;
+    }
+
+    .choose-area .content-title .choose-list li {
+        font-size: 12px;
+    }
+
+    .choose-area .card-choose {
+        padding: 0 10px 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .choose-area {
+        padding: 1rem;
+    }
+
+    .choose-area .content-title .title {
+        font-size: 24px;
+    }
+
+    .choose-area .content-title .text {
+        max-width: 250px;
+    }
+
+    .choose-area .content-title .choose-list li {
+        font-size: 11px;
+    }
+
+    .choose-area .card-choose {
+        padding: 0 5px 5px;
+    }
+
+    .choose-area .shape img {
+        display: none; /* Hide background shapes on very small screens */
+    }
+}
+

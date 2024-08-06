@@ -1,0 +1,57 @@
+/* Navbar.css */
+
+/* Animation for the cross icon */
+@keyframes rotateIn {
+    from {
+        transform: rotate(-90deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateOut {
+    from {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+}
+.navbar-container {
+    position: fixed;
+   
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.transition-transform {
+    transition: transform 0.3s ease;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.rotate-45 {
+    animation: rotateIn 0.3s ease;
+}
+
+.navbar-scrolled {
+    top: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-scrolled a {
+    color: #333; /* Change the text color when navbar is scrolled */
+}
+
+.navbar-container .navbar-scrolled img {
+    filter: brightness(0) invert(1); /* Optional: Invert logo color when navbar is scrolled */
+}

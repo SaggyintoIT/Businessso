@@ -1,0 +1,98 @@
+@import "https://fonts.googleapis.com/css?family=Rubik";
+
+.Logo-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Logo-container h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  font-family: 'Rubik', sans-serif;
+  margin-bottom: 2rem;
+}
+
+.slick-slide {
+  margin: 0px 10px; /* Adjusted margin to prevent overlap */
+}
+
+.slick-slide img {
+  width: 100%;
+  display: block; /* Ensures images do not overflow */
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-track {
+  position: relative;
+  display: flex; /* Ensures proper alignment of slides */
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 1px;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+.slick-dots li.slick-active button:before {
+  color: red;
+  width: 15px !important;
+}
+
+.logo-title {
+  max-width: 700px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Rubik', sans-serif;
+}
+
+.logo-subtitle {
+  font-weight: 600;
+  color: #FF6B6B;
+  display: inline-block;
+  margin-bottom: 1rem; /* Added margin for spacing */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .slick-slide {
+    margin: 0px 5px; /* Reduced margin for smaller screens */
+  }
+}
+
+@media (max-width: 520px) {
+  .slick-slide {
+    margin: 0px 2px; /* Further reduced margin for very small screens */
+  }
+
+  .logo-title {
+    font-size: 1.8rem; /* Adjusted font size for small screens */
+  }
+
+  .logo-subtitle {
+    font-size: 1rem; /* Adjusted font size for small screens */
+  }
+}

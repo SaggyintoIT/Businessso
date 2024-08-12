@@ -140,7 +140,7 @@ const Terms = () => {
           </div>
         </div>
       </section>
-      <Footer/>
+   
     </>
   );
 };

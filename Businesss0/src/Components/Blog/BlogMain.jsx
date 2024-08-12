@@ -339,7 +339,7 @@ const BlogMain = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+
       </>
         
   )

@@ -35,7 +35,7 @@ const Pricing = () => {
     </div>
   </div>
  <Price/>
- <Footer/>
+
   </>
   )
 }

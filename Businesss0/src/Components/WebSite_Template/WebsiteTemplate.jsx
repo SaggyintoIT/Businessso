@@ -181,7 +181,7 @@ const TemplatePage = () => {
     {/* Bg Shape */}
   </section>
 
-  <Footer />
+
 </>
 );
 };

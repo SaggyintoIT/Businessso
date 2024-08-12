@@ -169,7 +169,7 @@ const FAQSection = () => {
         </div>
       </div>
     </section>
-    <Footer/>
+
     </>
   );
 };

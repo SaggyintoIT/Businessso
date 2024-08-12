@@ -1,0 +1,35 @@
+.contact-area .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0px 10px 40px 0px rgba(78, 76, 76, 0.1);
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.contact-area .card .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    border-radius: 8px;
+    font-size: 24px;
+    color: var(--color-primary);
+    background-color: rgba(var(--color-primary-rgb), 0.1);
+    margin-right: 2rem;
+}
+
+@media (max-width:650px){
+    .contact-area .card{
+        margin-top: 10px;
+        margin-bottom: 1rem;
+        
+    }
+    .contact-area .card .icon{
+        margin-right: 1rem;
+    }
+}

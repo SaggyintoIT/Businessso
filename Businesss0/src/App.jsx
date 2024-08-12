@@ -1,42 +1,40 @@
-import { useState } from 'react'
-
-import './App.css'
-import Navbar from './Components/Navbar/Navbar'
-import Hero from './Components/HomeHero/Hero'
-import SetupWebsite from './Components/Setup-web/Setup'
-import TemplateArea from './Components/Templates/Temp'
-import ChooseArea from './Components/WhyChooseUs/Choose'
-import VcardArea from './Components/VCard/VCard'
-import Price from './Components/Pricing/Price'
-import Featured from './Components/Featured/Featured'
+import './App.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
- 
-import Swiper from 'swiper';
-import TestimonialSection from './Components/Testimonial/Testi'
-import BlogArea from './Components/Blogs/Blogs'
-import Footer from './Components/Footer/Footer'
-
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePageMain from './Components/HomePage/HomePageMain';
+import Navbar from './Components/HomePage/Navbar/Navbar';
+import Footer from './Components/HomePage/Footer/Footer';
+import TemplatePage from './Components/WebSite_Template/WebsiteTemplate';
+import Listings from './Components/Listings/Listings';
+import Pricing from './Components/Pricing/Pricing';
+import AboutUs from './Components/AboutUs/AboutUs';
+import Terms from './Components/Terms/Terms';
+import BlogMain from './Components/Blog/BlogMain';
+import FAQSection from './Components/FAQ/Faq';
+import ContactForm from './Components/Contact/ContactForm';
+import LoginForm from './Components/Login/Login';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    <Navbar/>
-    <Hero/>
-    <SetupWebsite/>
-    <TemplateArea/>
-    <ChooseArea/>
-    <VcardArea/>
-    <Price/>
-    <Featured/>
-    {/* <TestimonialSection/> */}
-    <BlogArea/>
-    <Footer/>
-    </>
-  )
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePageMain />} />
+         <Route path="/template" element={<TemplatePage/>} />
+        <Route path="/listing" element={<Listings />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/blog" element={<BlogMain />} />
+        <Route path="/faq" element={<FAQSection />} />
+        <Route path="/contact" element={<ContactForm />} />
+        <Route path='/login' element={<LoginForm/>}/>
+        
+
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
-export default App
+export default App;

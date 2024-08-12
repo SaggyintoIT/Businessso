@@ -1,0 +1,54 @@
+.Listing-card{
+    width: 25rem !important;
+}
+/* Pagination Container */
+.pagination-nav {
+    margin-top: 2rem; /* Add some top margin for spacing */
+  }
+  
+  /* Pagination List */
+  .pagination {
+    border-radius: 1rem; /* Round the corners of the pagination container */
+    background: #f8f9fa; /* Light background color */
+    display: flex;
+    gap: 0.5rem; /* Space between pagination items */
+  }
+  
+  /* Pagination Item */
+  .page-item {
+    border-radius: 0.5rem; /* Round the corners of each pagination item */
+    margin: 0;
+  }
+  
+  /* Pagination Link */
+  .page-link {
+    display: block;
+    padding: 0.5rem 1rem; /* Add padding for better click area */
+    color: #000000; /* Default text color */
+    text-decoration: none;
+    border: 1px solid #dee2e6; /* Border color */
+    border-radius: 0.5rem; /* Round the corners */
+    background-color: #fff; /* Background color for non-active items */
+    transition: background-color 0.2s, color 0.2s; /* Smooth transition for background and text color */
+  }
+  
+  /* Hover Effect */
+  .page-link:hover {
+    background-color: #e9ecef; /* Light gray background on hover */
+  }
+  
+  /* Active Page */
+  .page-item.active .page-link {
+    background-color: #ffcccc; /* Light red background for active page */
+    color: #fff; /* White text color for active page */
+    border-color: #ffcccc; /* Match border color with background */
+  }
+  
+  /* Disabled State */
+  .page-item.disabled .page-link {
+    background-color: #e9ecef; /* Light gray background for disabled state */
+    color: #6c757d; /* Gray text color */
+    border-color: #e9ecef; /* Match border color with background */
+    cursor: not-allowed; /* Show a not-allowed cursor for disabled state */
+  }
+  

@@ -6,7 +6,7 @@ import LogoSlider from '../Sponsor/Spnsr'
 const Hero = () => {
   return (
     <> 
-       <div id='home' className='home-banner pb-80  pt-48' >
+       <div id='home' className='home-banner pb-80  pt-32' >
       <div className="container">
         <div className=" justify-content-center"></div>
         <div className="">
